@@ -1,0 +1,1 @@
+Anonymous thought exchange is a service where users can share thoughts and ideas without revealing their identity, the app was built using the Flask web framework and allows users to post ideas and others to comment on them.

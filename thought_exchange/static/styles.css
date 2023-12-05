@@ -1,0 +1,66 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.card
+{
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+}
+
+.card-body
+{
+    text-align: left;
+}
+
+.card:hover 
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+button:hover 
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}

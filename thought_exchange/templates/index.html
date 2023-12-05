@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <a href="/post"><button class="btn btn-primary">Make a post</button></a>
+    {% for post in posts %}
+    <div class="card" style="width: 36rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5> 
+            <h6 class="card-subtitle mb-2 text-muted">Up votes: {{ post.up_votes }}</h6>
+            <p class="card-text">{{ post.text }}</p>
+            <br>
+            <ul class="list-group list-group-flush">
+            {% for comment in comments %}
+                {% if comment.post_id == post.id  %}
+                    <li class="list-group-item">{{ comment.text }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        </div>
+        <div class="card-footer">
+            <a href="/comment/{{ post.id }}" class="card-link">
+                <button class="btn btn-primary">Add a comment</button>
+            </a>
+            {% if session.user_id == post.user_id %}
+                <button disabled class="btn btn-primary">Up vote</button>
+            {% else %}
+                <a href="/up-vote/{{ post.id }}" class="card-link">
+                    <button class="btn btn-primary">Up vote</button>
+                </a>
+            {% endif %}
+        </div>        
+    </div>
+    {% endfor %}
+{% endblock %}

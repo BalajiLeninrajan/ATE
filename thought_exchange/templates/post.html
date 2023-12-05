@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Post
+{% endblock %}
+
+{% block main %}
+    <form action="/post" method="post">
+        <div class="form-group">
+            <input autofocus class="form-control" name="title" placeholder="Title" type="text">
+        </div>
+        <div class="form-group">
+            <textarea name="text" placeholder="text" cols="30" rows="10"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Post</button>
+    </form>
+{% endblock %}

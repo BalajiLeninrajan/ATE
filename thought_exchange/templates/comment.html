@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Comment
+{% endblock %}
+
+{% block main %}
+    <form action="/comment/{{ post.id }}" method="post">
+        <div class="form-group">
+            <textarea name="text" placeholder="text" cols="30" rows="10"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">comment</button>
+    </form>
+{% endblock %}
